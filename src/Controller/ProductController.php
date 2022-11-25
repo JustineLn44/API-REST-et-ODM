@@ -120,7 +120,7 @@ class ProductController extends AbstractController
             return $this->json('Please entre a number for the stock');
         }
 
-        $product->setStock($product->getStock() + $request->get('modificationStock'));
+        $product->setStock($product->getStock() + $request->get('editStock'));
 
         $entityManager->persist($product);
         $entityManager->flush();
