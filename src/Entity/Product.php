@@ -24,6 +24,9 @@ class Product
     #[Assert\NotBlank]
     private ?int $stock = null;
 
+    #[ORM\Column(length: 13)]
+    private ?string $code = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -49,6 +52,18 @@ class Product
     public function setStock(int $stock): self
     {
         $this->stock = $stock;
+
+        return $this;
+    }
+
+    public function getCode(): ?string
+    {
+        return $this->code;
+    }
+
+    public function setCode(string $code): self
+    {
+        $this->code = $code;
 
         return $this;
     }

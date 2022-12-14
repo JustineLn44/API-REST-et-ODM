@@ -1,0 +1,4 @@
+type RootQuery {
+    product(id: ID!): Product
+    products: [Product!]!
+}
